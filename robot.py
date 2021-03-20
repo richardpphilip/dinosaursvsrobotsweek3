@@ -13,5 +13,10 @@ class Robot:
 
     def robot_attack(self, dinosaur):
         dinosaur.dinosaur_health -= self.robot_attack_power
+        while dinosaur.dinosaur_health > 0:
+            dinosaur.dinosaur_health -= self.robot_attack_power
+            print(dinosaur.dinosaur_health)
 
+        else:
+            print('the dinosaur is dead')
 
