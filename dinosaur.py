@@ -11,4 +11,4 @@ class Dinosaur:
             print(robot.robot_health)
 
         else:
-            print('the robot is dead')
+            print(f'{robot.robot_name} is dead')
