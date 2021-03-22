@@ -1,15 +1,10 @@
 from fleet import Fleet
 from herd import Herd
 
-
 if __name__ == '__main__':
     dinosaur_herd = Herd()
     robot_fleet = Fleet()
 
-
-    #
-    # i = 0
-    # j = 0
 
     def dinosaurs_win(dinosaur, robot):
         i = 0
@@ -31,5 +26,18 @@ if __name__ == '__main__':
                 j += 1
         else:
             print('all dinosaurs are dead.  Robots win!')
-    # dinosaurs_win(dinosaur_herd.dinosaur_herd_list[0], robot_fleet.robot_fleet_list)
-    robots_win(robot_fleet.robot_fleet_list[0], dinosaur_herd.dinosaur_herd_list)
+
+
+    prompt = input("Who do you want to win the game? dinosaurs or robots?")
+    while prompt != 'dinosaurs' or 'robots':
+        if prompt == 'dinosaurs':
+            dinosaurs_win(dinosaur_herd.dinosaur_herd_list[0], robot_fleet.robot_fleet_list)
+            break
+
+        if prompt == 'robots':
+            robots_win(robot_fleet.robot_fleet_list[0], dinosaur_herd.dinosaur_herd_list)
+            break
+
+        else:
+            print('Sorry that is not an option.  Please choose dinosaurs or robots.')
+            prompt = input("Who do you want to win the game? dinosaurs or robots?")
